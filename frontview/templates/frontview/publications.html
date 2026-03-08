@@ -1,0 +1,85 @@
+{% extends 'frontview/base.html' %}  
+{% load static %}
+
+    {% block title %}
+        <title>Zinago Institute for Policy and Socio-Legal Research</title>
+    {% endblock title %}
+        
+    {% block metas %}
+            
+    {% endblock metas %}
+
+    {% block styles %}     
+   {% endblock styles %}   
+   
+  
+    {% block main %}
+    <section class="hero-gradient py-20 md:py-28">
+      <div class="container">
+        <h1
+          class="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4"
+        >
+          Publications
+        </h1>
+        <div class="w-16 h-1 gold-gradient rounded" ></div>
+      </div>
+    </section>
+
+    {% comment %} {/* Journal Articles */} {% endcomment %}
+    <section class="py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Peer-Reviewed Journal Articles" %}
+
+        <div>
+           {% for pub in publications %}
+            {% include "frontview/publicationCard.html" with pub=pub %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    {% comment %} {/* Under Review */} {% endcomment %}
+    <section class="section-alt py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Articles Under Review" %}
+
+        <div>
+        
+          {% for pub in underReview %}
+            {% include "frontview/publicationCard.html" with pub=pub %}
+          {% endfor %}
+            
+        </div>
+      </div>
+    </section>
+
+    {% comment %} {/* Conference Presentations */} {% endcomment %}
+    <section class="py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Conference Presentations" %}
+
+        <div>
+            
+            {% for pres in conferencePresentations %}                
+            <div
+              class="border-b border-border py-5 last:border-b-0"
+            >
+              <p class="text-sm text-muted-foreground mb-1">{{pres.authors}} ({{pres.year}})</p>
+              <h4 class="font-heading font-semibold text-base md:text-lg leading-snug mb-1">{{pres.title}}</h4>
+              <p class="text-sm text-accent italic">{{pres.venue}}</p>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </section>
+                
+    {% endblock main %}
+        
+    {% block js %}
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+{% endblock js %}
+
+ 

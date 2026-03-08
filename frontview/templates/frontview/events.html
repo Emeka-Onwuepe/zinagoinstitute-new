@@ -1,0 +1,81 @@
+{% extends 'frontview/base.html' %}  
+{% load static %}
+
+    {% block title %}
+        <title>Zinago Institute for Policy and Socio-Legal Research</title>
+    {% endblock title %}
+        
+    {% block metas %}
+            
+    {% endblock metas %}
+
+    {% block styles %}     
+   {% endblock styles %}   
+   
+  
+    {% block main %}
+        <section class="hero-gradient py-20 md:py-28">
+      <div class="container">
+        <h1
+          class="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4"
+        >
+          Events &amp; Conferences
+        </h1>
+        <div class="w-16 h-1 gold-gradient rounded" ></div>
+        <p
+          class="text-primary-foreground/70 text-lg mt-4 max-w-2xl"
+        >
+          The Zinago Institute participates in academic conferences, policy dialogues and scholarly forums that contribute to global discussions on labour governance, artificial intelligence, migration regulation and institutional reform.
+        </p>
+      </div>
+    </section>
+
+    {% comment %} {/* International */} {% endcomment %}
+    <section class="py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="International Conference Presentations" %}
+        <div class="space-y-6">
+          {% for event in internationalEvents %}
+            {% include "frontview/eventCard.html" with event=event %}
+          {% endfor %}  
+        </div>
+      </div>
+    </section>
+
+    {% comment %} {/* Nigerian */} {% endcomment %}
+    <section class="section-alt py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Academic Conferences in Nigeria" %}
+        <div class="space-y-6">
+          {% for event in nigerianEvents %}
+            {% include "frontview/eventCard.html" with event=event %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    {% comment %} {/* Engagement */} {% endcomment %}
+    <section class="py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Academic Engagement" %}
+        <div>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            Through participation in international conferences and academic forums across the United States, the United Kingdom, Ireland and Nigeria, the Zinago Institute contributes to global scholarly discussions on labour law, artificial intelligence, governance reform and the future of work.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground">
+            These engagements strengthen research collaboration, knowledge exchange and the development of evidence-based legal and policy solutions to contemporary labour and governance challenges.
+          </p>
+        </div>
+      </div>
+    </section>
+                
+    {% endblock main %}
+        
+    {% block js %}
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+{% endblock js %}
+
+ 

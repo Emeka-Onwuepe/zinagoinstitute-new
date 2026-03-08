@@ -1,0 +1,55 @@
+  <footer class="bg-primary text-primary-foreground">
+    <div class="container py-16">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 rounded gold-gradient flex items-center justify-center">
+              <span class="font-heading font-bold text-primary text-base">Z</span>
+            </div>
+            <span class="font-heading font-semibold text-lg">Zinago Institute</span>
+          </div>
+          <p class="text-primary-foreground/60 text-sm leading-relaxed max-w-xs">
+            An independent, non-profit research organisation dedicated to advancing evidence-based scholarship on law, public policy and labour governance in Africa.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-semibold mb-4 text-accent">Quick Links</h4>
+          <nav class="flex flex-col gap-2">
+            {% for link in nav_links %}
+                <a
+                href={{link.path}}
+                class="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors"
+              >
+              
+              {% if link.label == 'Policy'  %}
+                Policy Research
+                {% elif link.label == 'Research' %}
+                Research Programmes
+              {% elif link.label != 'Home' %}
+                {{link.label}}
+              {% endif %}
+                
+          </a>
+            {% endfor %}
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-semibold mb-4 text-accent">Contact</h4>
+          <p class="text-primary-foreground/60 text-sm leading-relaxed">
+            For research inquiries, collaboration proposals or general information, please reach out to the Institute.
+          </p>
+          <p class="text-primary-foreground/80 text-sm mt-3">
+            info@zinagoinstitute.org
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-primary-foreground/10 mt-12 pt-8 text-center">
+        <p class="text-primary-foreground/40 text-sm">
+          &copy; <span id='date'></span> Zinago Institute for Policy and Socio-Legal Research. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,138 @@
+{% extends 'frontview/base.html' %}  
+{% load static %}
+
+    {% block title %}
+        <title>Zinago Institute for Policy and Socio-Legal Research</title>
+    {% endblock title %}
+        
+    {% block metas %}
+            
+    {% endblock metas %}
+
+    {% block styles %}     
+   {% endblock styles %}   
+   
+  
+    {% block main %}
+   
+    {% comment %} {/* Page Hero */} {% endcomment %}
+    <section class="hero-gradient py-20 md:py-28">
+      <div class="container">
+        <h1
+         
+          class="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4"
+        >
+          About the Institute
+        </h1>
+        <div class="w-16 h-1 gold-gradient rounded" ></div>
+      </div>
+    </section>
+
+    {% comment %} {/* About */} {% endcomment %}
+    <section class="py-16 md:py-24">
+      <div class="container max-w-4xl">
+        <div  class="prose-section">
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            Zinago Institute for Policy and Socio-Legal Research is an independent, non-profit research organisation dedicated to advancing evidence-based scholarship on law, public policy and labour governance in Africa.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            The Institute conducts interdisciplinary research on the impact of artificial intelligence, digital technologies and economic transformation on employment, labour regulation and social protection.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            Through research, policy engagement and capacity building, the Institute contributes to informed legal reform, institutional development and the promotion of decent work.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground">
+            The Institute aims to serve as a platform for rigorous socio-legal research that informs policy development, strengthens institutions and promotes inclusive economic and social progress.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {% comment %} {/* Mission & Vision */} {% endcomment %}
+    <section class="section-alt py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Mission and Vision" %}
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="bg-background border border-border rounded-lg p-8">
+            <h3 class="font-heading text-2xl font-semibold mb-4">Mission</h3>
+            <div class="w-12 h-1 gold-gradient rounded mb-4" ></div>
+            <p class="text-muted-foreground leading-relaxed mb-4">
+              The mission of Zinago Institute is to produce high-quality interdisciplinary research that advances evidence-based policymaking, strengthens labour governance and promotes legal frameworks that support fair, inclusive and sustainable labour markets.
+            </p>
+            <p class="text-muted-foreground leading-relaxed">
+              The Institute seeks to bridge the gap between academic research, public policy and institutional practice through scholarship, policy dialogue and professional training.
+            </p>
+          </div>
+          <div class="bg-background border border-border rounded-lg p-8">
+            <h3 class="font-heading text-2xl font-semibold mb-4">Vision</h3>
+            <div class="w-12 h-1 gold-gradient rounded mb-4" ></div>
+            <p class="text-muted-foreground leading-relaxed">
+              The Institute's vision is to become a leading African research centre on labour law, artificial intelligence governance and the future of work, contributing to global policy discussions on employment regulation, technological change and social justice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% comment %} {/* Institutional Commitment */} {% endcomment %}
+    <section class="py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Institutional Commitment" %}
+
+        <div>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            Zinago Institute operates exclusively for public benefit and is committed to advancing research and policy development that promote justice, decent work and inclusive economic development.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            The Institute is guided by principles of academic independence, intellectual integrity and evidence-based policy engagement.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground">
+            All research and programme activities are conducted in furtherance of the Institute's public-interest objectives and not for private profit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {% comment %} {/* Collaboration */} {% endcomment %}
+    <section class="section-alt py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Collaboration and Partnerships" %}
+        <div>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            Zinago Institute collaborates with universities, research institutions, government agencies, international organisations and civil society organisations in order to advance socio-legal research and policy development.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            Through these partnerships, the Institute promotes knowledge exchange, interdisciplinary research and the development of innovative legal and policy responses to emerging challenges affecting labour markets, technological change and institutional governance.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground">
+            The Institute also seeks to engage with scholars, policymakers and practitioners across Africa and globally to strengthen collaborative research on the future of work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {% comment %} {/* Funding */} {% endcomment %}
+    <section class="py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title="Funding and Support" %}
+
+        <div>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            As a non-profit research organisation, Zinago Institute supports its research and programmes through grants, research funding, donations and institutional partnerships that advance its public-interest objectives.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            All resources received are applied solely towards the Institute's research, educational and policy development activities in accordance with applicable laws and regulatory requirements.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground">
+            The Institute welcomes collaboration and support from research partners, philanthropic foundations, development organisations and institutions that share its commitment to advancing evidence-based policy research and institutional reform.
+          </p>
+        </div>
+      </div>
+    </section>        
+    {% endblock main %}
+        
+    {% block js %}
+
+{% endblock js %}
+        
