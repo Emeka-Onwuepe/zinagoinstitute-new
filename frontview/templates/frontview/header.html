@@ -6,7 +6,7 @@
     <header class="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-primary-foreground/10">
       <div class="container flex items-center justify-between h-16 md:h-20">
 
-        <a to="/" class="flex items-center gap-3">
+        <a href = "./" class="flex items-center gap-3">
           <div class="w-9 h-9 rounded gold-gradient flex items-center justify-center">
             <span class="font-heading font-bold text-primary text-lg">Z</span>
           </div>
@@ -47,28 +47,24 @@
              class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
         </div>
         </button>
-      
-   
-      
+        </div>
+        
       {% comment %} Mobile Nav {% endcomment %}
       {% comment %} <AnimatePresence> {% endcomment %}
-        <div id='mobile_nav'
+        <nav id='mobile_nav'
             class="lg:hidden overflow-hidden bg-primary border-t border-primary-foreground/10"
           >
             <div class="container py-4 flex flex-col gap-1">
                   {% for link in nav_links %}
                 <a href='{{link.path}}'
-                onclick = "document.querySelector('#mobile_nav').classList.toggle('hidden')"
                 class = 'px-4 py-3 text-sm font-medium rounded transition-colors {% if active_link == link.label %} text-accent bg-primary-foreground/5
                  {% else %} text-primary-foreground/80 hover:text-primary-foreground {% endif %}'
                 >{{link.label}}
                 </a>
             {% endfor %}
             </div>
-        </div>
+          </nav>
     
       {% comment %} </AnimatePresence> {% endcomment %}
 
-
-    </div>
  </header>
