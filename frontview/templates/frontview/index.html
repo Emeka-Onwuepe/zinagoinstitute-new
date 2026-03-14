@@ -98,8 +98,92 @@
         </div>
       </section>
 
-      {% comment %} {/* Recent Publications Preview */} {% endcomment %}
-      <section class="py-20 md:py-28">
+
+
+      <section class="py-16 md:py-24" style='border-bottom:2px solid hsl(37.5, 26.7%, 94.1%)'>
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title='Academic Engagement' %}
+        <div
+        >
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            Through participation in international conferences and academic forums across the United States, the United Kingdom, 
+            Ireland and Nigeria, the Zinago Institute contributes to global scholarly discussions on labour law, artificial intelligence, 
+            governance reform and the future of work.         
+         </p>
+          <p class="text-lg leading-relaxed text-muted-foreground">
+            These engagements strengthen research collaboration, knowledge exchange and the development
+            of evidence-based legal and policy solutions to contemporary labour and governance challenges.          
+          </p>
+        </div>
+      </div>
+    </section>
+
+{% comment %} research and paper {% endcomment %}
+      <section class="py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include "frontview/sectionHeader.html" with title=section_header.2.title subtitle=section_header.2.subtitle %}
+
+        <div
+        >
+          <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+            The Zinago Institute for Policy and Socio-Legal Research produces policy-oriented research designed to inform public debate, support evidence-based policymaking and strengthen legal and institutional frameworks governing work, technology and social protection.
+          </p>
+          <p class="text-lg leading-relaxed text-muted-foreground">
+            Through policy briefs, working papers and applied research reports, the Institute translates academic research into practical policy recommendations for governments, international organisations and regulatory institutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+      {% comment %} {/* Policy Research */} {% endcomment %}
+      {% comment %} <section class="section-alt py-20 md:py-28">
+        <div class="container max-w-4xl">
+          {% include "frontview/sectionHeader.html" with title="Policy Research &amp; Working Papers" %}
+
+          <div >
+            <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+              The Institute produces policy-oriented research designed to inform public debate, support evidence-based policymaking and strengthen legal and institutional frameworks governing work, technology and social protection.
+            </p>
+            <p class="text-sm font-medium text-foreground mb-3">Policy briefs address topics such as:</p>
+            <ul class="space-y-3 mb-6">
+              
+              {% for topic in policies %}
+                <li class="flex items-start gap-3 text-muted-foreground">
+                  <span class="w-2 h-2 rounded-full gold-gradient mt-2 flex-shrink-0" > </span>
+                  {{topic}}
+                </li>
+                {% endfor %}
+
+            </ul>
+          </div>
+        </div>
+      </section> {% endcomment %}
+          <section class="section-alt py-16 md:py-24">
+      <div class="container max-w-4xl">
+        {% include 'frontview/sectionHeader.html' with title="Policy Briefs" %}
+        <div
+         
+        >
+          <p class="text-lg leading-relaxed text-muted-foreground mb-8">
+            Policy briefs provide concise and accessible analyses of emerging legal and policy issues affecting labour markets, governance systems and technological transformation.
+          </p>
+          <p class="text-muted-foreground mb-4">The Institute develops policy briefs addressing topics such as:</p>
+          <ul class="space-y-3">
+
+            
+            {% for topic in policies %}
+                <li class="flex items-start gap-3 text-muted-foreground">
+                <span class="w-2 h-2 rounded-full gold-gradient mt-2 flex-shrink-0" ></span>
+                {{topic}}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {% comment %} research Impact {% endcomment %}
+ <section class="py-20 md:py-28">
         <div class="container">
           {% include "frontview/sectionHeader.html" with title=section_header.1.title subtitle=section_header.1.subtitle %}
           <div
@@ -127,6 +211,64 @@
             >
               View All Publications <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </a>
+          </div>
+        </div>
+      </section>
+
+
+      {% comment %} {/* Training & Engagements */} {% endcomment %}
+      <section class="py-20 md:py-28">
+        <div class="container">
+          {% include "frontview/sectionHeader.html" with title="Training &amp; Engagements" %}
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div
+              class="bg-card border border-border rounded-lg p-6 md:p-8"
+            >
+              <h3 class="font-heading font-semibold text-xl text-foreground mb-3">
+                Training and Institutional Workshops
+              </h3>
+              <p class="text-muted-foreground leading-relaxed mb-4">
+                Organisations interested in professional training programmes, workshops or institutional capacity-building initiatives may contact the Institute for further information.
+              </p>
+              <p class="text-sm font-medium text-foreground mb-4">Training programmes include:</p>
+              <ul class="text-muted-foreground mb-4 leading-relaxed space-y-1.5 list-disc list-inside">
+                <li>Employment and labour law compliance</li>
+                <li>Artificial intelligence and the future of work</li>
+                <li>Workplace governance and organisational accountability</li>
+                <li>Prevention of workplace violence and harassment</li>
+                <li>Occupational safety and health</li>
+                <li>Mediation and dispute resolution in employment relations</li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-card border border-border rounded-lg p-6 md:p-8"
+            >
+              <h3 class="font-heading font-semibold text-xl text-foreground mb-4">
+                Media and Speaking Engagements
+              </h3>
+              <p class="text-muted-foreground leading-relaxed mb-4">
+                The Institute also welcomes invitations for:
+              </p>
+              <ul class="text-muted-foreground mb-4 leading-relaxed space-y-1.5 list-disc list-inside">
+                <li>Academic conferences</li>
+                <li>Policy consultations</li>
+                <li>Expert commentary</li>
+                <li>Public lectures</li>
+                <li>Professional training programmes</li>
+              </ul>
+              <div class="mt-6">
+                <a
+                  href="#contact"
+                  class="inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all text-sm"
+                >
+                  Get in Touch 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

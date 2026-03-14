@@ -3,9 +3,9 @@
       <div class="grid md:grid-cols-3 gap-12">
         <div>
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-8 h-8 rounded gold-gradient flex items-center justify-center">
+            {% comment %} <div class="w-8 h-8 rounded gold-gradient flex items-center justify-center">
               <span class="font-heading font-bold text-primary text-base">Z</span>
-            </div>
+            </div> {% endcomment %}
             <span class="font-heading font-semibold text-lg">Zinago Institute</span>
           </div>
           <p class="text-primary-foreground/60 text-sm leading-relaxed max-w-xs">
@@ -17,7 +17,9 @@
           <h4 class="font-heading font-semibold mb-4 text-accent">Quick Links</h4>
           <nav class="flex flex-col gap-2">
             {% for link in nav_links %}
-                <a
+            {% if link.label != 'contact' %}
+
+              <a
                 href={{link.path}}
                 class="text-primary-foreground/60 hover:text-primary-foreground text-sm transition-colors"
               >
@@ -26,24 +28,44 @@
                 Policy Research
                 {% elif link.label == 'Research' %}
                 Research Programmes
-              {% elif link.label != 'Home' %}
+              {% else %}
                 {{link.label}}
               {% endif %}
                 
           </a>
+              
+            {% endif %}
             {% endfor %}
           </nav>
         </div>
-
-        <div>
-          <h4 class="font-heading font-semibold mb-4 text-accent">Contact</h4>
-          <p class="text-primary-foreground/60 text-sm leading-relaxed">
-            For research inquiries, collaboration proposals or general information, please reach out to the Institute.
+        
+          <div id='contact'>
+          <h4 class="font-heading font-semibold mb-4 text-accent">Contact the Institute</h4>
+          <p class="text-primary-foreground/60 text-sm leading-relaxed mb-4">
+            The Zinago Institute welcomes enquiries relating to research collaboration, academic partnerships, training programmes and policy engagement.
           </p>
-          <p class="text-primary-foreground/80 text-sm mt-3">
+          <h5 class="font-heading font-semibold text-sm text-primary-foreground/80 mb-1">Office Address</h5>
+          <p class="text-primary-foreground/60 text-sm leading-relaxed mb-4">
+            Zinago Institute for Policy and Socio-Legal Research<br />
+            45 Nouakchott Street<br />
+            Wuse Zone 1<br />
+            Abuja, Nigeria
+          </p>
+          <h5 class="font-heading font-semibold text-sm text-primary-foreground/80 mb-1">Email</h5>
+          <p class="text-primary-foreground/80 text-sm leading-relaxed mb-4">
             info@zinagoinstitute.org
           </p>
+        
+          <h5 class="font-heading font-semibold text-sm text-primary-foreground/80 mb-1">Phone</h5>
+          <p class="text-primary-foreground/80 text-sm">
+            +2348038707736
+          </p>
+          <p class="text-primary-foreground/80 text-sm">
+            +2347120031511
+          </p>
+          
         </div>
+
       </div>
 
       <div class="border-t border-primary-foreground/10 mt-12 pt-8 text-center">

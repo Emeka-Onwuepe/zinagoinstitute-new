@@ -5,7 +5,10 @@ nav_links = [
   { 'label': "Research", 'path': "./research" },
   { 'label': "Publications", 'path': "./publications" },
   { 'label': "Events", 'path': "./events" },
-  { 'label': "Policy", 'path': "./policy" },
+    { 'label': "Contact", 'path': "#contact" },
+
+  
+  # { 'label': "Policy", 'path': "./policy" },
 ]
           
 section_header = [
@@ -17,7 +20,11 @@ section_header = [
     {'title': "Research Impact", 
      'subtitle': "Research produced through the Institute contributes to international academic and policy discussions on labour governance, technological transformation and institutional reform.",
      'centered': False
-    }
+    },
+    {'title':'Policy Research & Working Papers',
+     'subtitle':'Translating academic research into practical policy recommendations for governments, international organisations and regulatory institutions.',
+      'centered': False,
+}
 ]
 
 highlights = [
@@ -48,3 +55,9 @@ stats = [
           { 'number': "6+", 'label': "International Conferences" },
           { 'number': "5", 'label': "Research Programmes" },
           ]
+
+policies = [ "Artificial intelligence regulation in labour markets",
+                "Algorithmic management and worker protection",
+                "Migration governance and labour mobility",
+                "Prevention of workplace violence",
+              ]

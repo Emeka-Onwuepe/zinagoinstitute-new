@@ -11,4 +11,6 @@ urlpatterns = [
     path('publications',views.publicationsView,name="publicationsView"),
     path('events',views.eventsView,name="eventsView"),
     path('policy',views.policyView,name="policyView"), 
+    path('loaddata',views.loadData,name="loadData"), 
+
 ]

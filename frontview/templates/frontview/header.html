@@ -1,3 +1,4 @@
+{% load static %}
 
 {% comment %} const SiteHeader = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -7,17 +8,19 @@
       <div class="container flex items-center justify-between h-16 md:h-20">
 
         <a href = "./" class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded gold-gradient flex items-center justify-center">
-            <span class="font-heading font-bold text-primary text-lg">Z</span>
+          <div class="w-10 h-12 rounded flex items-center justify-center" 
+          style='width:100px;padding:5px;background:white;padding-right: 8px;'>
+            {% comment %} <span class="font-heading font-bold text-primary text-lg">Z</span> {% endcomment %}
+            <img class="font-heading font-bold text-primary text-lg" width='100%' height='auto' class="logo"  src="{% static 'images/logo.jpeg'%}" alt="logo" />
           </div>
-          <div class="hidden sm:block">
+          {% comment %} <div class="hidden sm:block">
             <span class="font-heading text-primary-foreground font-semibold text-lg leading-tight block">
               Zinago Institute
             </span>
             <span class="text-primary-foreground/60 text-xs leading-tight block">
               Policy &amp; Socio-Legal Research
             </span>
-          </div>
+          </div> {% endcomment %}
         </a>
 
         {% comment %} destop nav {% endcomment %}
@@ -41,7 +44,7 @@
             <line x1="4" x2="20" y1="12" y2="12"></line>
             <line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
         </div>
-        <div id='close'>
+        <div id='close' style='display:none'>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
              class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
@@ -57,6 +60,7 @@
             <div class="container py-4 flex flex-col gap-1">
                   {% for link in nav_links %}
                 <a href='{{link.path}}'
+                onclick="toggle('close')"
                 class = 'px-4 py-3 text-sm font-medium rounded transition-colors {% if active_link == link.label %} text-accent bg-primary-foreground/5
                  {% else %} text-primary-foreground/80 hover:text-primary-foreground {% endif %}'
                 >{{link.label}}
