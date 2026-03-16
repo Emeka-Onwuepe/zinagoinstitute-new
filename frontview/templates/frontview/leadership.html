@@ -1,0 +1,45 @@
+
+{% comment %} const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5 },
+  }),
+}; {% endcomment %}
+{% load static %}
+
+
+  <section class='py-16 md:py-24 
+  {% if alt %}
+     "section-alt"  
+  {% endif %}'>
+
+    <div class="container max-w-4xl">
+  {% include "frontview/sectionHeader.html" with title='Leadership' %}
+      <div class="grid md:grid-cols-2 gap-8">
+          {% for leader in leaders  %}
+              <div class="bg-card border border-border rounded-lg p-8 text-center"
+          >
+           <div class="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+              <img src="{% static 'images/' %}{{ leader.image }}" alt="{{leader.name}}" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-foreground">{{leader.name}}</h3>
+            <p class="text-accent font-medium mt-1">{{leader.role}}</p>
+            <p class="text-muted-foreground text-sm mt-2">{{leader.org}}</p>
+            {% if leader.location  %}
+              <p class="text-muted-foreground text-sm mt-1">{{leader.location}}</p>
+                          {% endif %}
+
+              {% if leader.affiliation  %}
+              <p class="text-muted-foreground text-sm mt-1 italic">
+                Affiliation: {{leader.affiliation}}
+              </p>
+              {% endif %}
+
+          </div>
+          {% endfor %}
+            
+      </div>
+    </div>
+  </section>

@@ -61,3 +61,21 @@ policies = [ "Artificial intelligence regulation in labour markets",
                 "Migration governance and labour mobility",
                 "Prevention of workplace violence",
               ]
+
+leaders = [
+  {
+    "name": "Dr. Nancy Nzom",
+    "role": "Founder",
+    "org": "Zinago Institute for Policy and Socio-Legal Research",
+    "location": "Nigeria",
+    'image':'nancy.jpeg',
+  },
+  {
+    "name": "Daniel Moses Eyyazo",
+    "role": "Research Director",
+    "org": "Zinago Institute for Policy and Socio-Legal Research",
+    "affiliation": "Nasarawa State University, Keffi",
+    'image':'moses.jpeg',
+    'location':'Nigeria'
+  },
+]
