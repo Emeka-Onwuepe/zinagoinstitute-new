@@ -1073,8 +1073,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .py-2{
@@ -1083,13 +1083,13 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-3{
@@ -1706,18 +1706,18 @@ h1, h2, h3, h4, h5, h6{
   }
 
   .md\:py-24{
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:py-28{
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:py-32{
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .md\:text-4xl{
