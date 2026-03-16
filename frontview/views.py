@@ -55,26 +55,26 @@ def policyView(request):
                   {'nav_links':nav_links,'active_link':"Policy",'policyTopics':policyTopics})
 
 def loadData(request):
-    # for data in flagshipProjects:
-    #     FlagshipProject.objects.create(**data)
+    for data in flagshipProjects:
+        FlagshipProject.objects.create(**data)
     
     for data in publications:
         data['published'] = True
         Publications.objects.create(**data)
     
-    # for data in underReview:
-    #     data['published'] = False
-    #     Publications.objects.create(**data)
+    for data in underReview:
+        data['published'] = False
+        Publications.objects.create(**data)
     
-    # for data in internationalEvents:
-    #     data['type'] = 'foreign'
-    #     Events.objects.create(**data)
+    for data in internationalEvents:
+        data['type'] = 'foreign'
+        Events.objects.create(**data)
     
-    # for data in internationalEvents:
-    #     data['type'] = 'local'
-    #     Events.objects.create(**data)
+    for data in internationalEvents:
+        data['type'] = 'local'
+        Events.objects.create(**data)
     
-    # for data in conferencePresentations:
-    #     ConferencePresentation.objects.create(**data)
+    for data in conferencePresentations:
+        ConferencePresentation.objects.create(**data)
 
     return HttpResponse('data_loaded',status=200)
