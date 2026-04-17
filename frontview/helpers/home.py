@@ -78,4 +78,11 @@ leaders = [
     'image':'moses.jpeg',
     'location':'Nigeria'
   },
+   {
+    "name": "Maryann Amaka Adinnu",
+    "role": "Director Media and Communications",
+    "org": "Zinago Institute for Policy and Socio-Legal Research",
+    'image':'maryann.jpeg',
+    'location':'Nigeria'
+  },
 ]
