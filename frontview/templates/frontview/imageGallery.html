@@ -1,0 +1,11 @@
+{% comment %} {/* Image Gallery */} {% endcomment %}
+<section class="py-20 md:py-28">
+  <div class="container">
+    {% include "frontview/sectionHeader.html" with title="Image Gallery" %}
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      {% for image in gallery_images %}
+        {% include "frontview/imageCard.html" with image=image %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
