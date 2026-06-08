@@ -1,4 +1,5 @@
 {% comment %} {/* Image Gallery */} {% endcomment %}
+{% if image %}
 <section class="py-18 md:py-24">
   <div class="container">
     {% include "frontview/sectionHeader.html" with title="Image Gallery" %}
@@ -9,3 +10,4 @@
     </div>
   </div>
 </section>
+{% endif %}

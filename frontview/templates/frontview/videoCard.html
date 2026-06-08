@@ -1,4 +1,5 @@
 {% comment %} {/* Video Player Card */} {% endcomment %}
+{% if featured_video.video_url %}
 <section class="py-18 md:py-24">
   <div class="container max-w-4xl">
     {% include "frontview/sectionHeader.html" with title="Featured Video" %}
@@ -6,8 +7,8 @@
       <div class="relative pt-[56.25%] bg-black">
         <iframe
           class="absolute top-0 left-0 w-full h-full"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Featured Video"
+          src="{{featured_video.video_url}}"
+          title="{{featured_video.title}}"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -15,12 +16,13 @@
       </div>
       <div class="p-6 md:p-8">
         <h3 class="font-heading font-semibold text-2xl text-foreground mb-3">
-          Video Title
+            {{ featured_video.title }}
         </h3>
         <p class="text-muted-foreground leading-relaxed">
-          Add your video description here. This should provide context about the video content, key topics covered, and any relevant information that would help viewers understand the purpose and value of the featured video.
+            {{ featured_video.description }}
         </p>
       </div>
     </div>
   </div>
 </section>
+{% endif %}
