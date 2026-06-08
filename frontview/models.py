@@ -98,3 +98,50 @@ class ConferencePresentation(models.Model):
     def __str__(self):
         """Unicode representation of ConferencePresentation."""
         return f"{self.year} - {self.title[:20]}"
+
+
+class Video(models.Model):
+    """Model definition for Video."""
+
+    title = models.CharField(max_length=250)
+    description = models.TextField()
+    video_url = models.URLField(max_length=500)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        """Meta definition for Video."""
+
+        verbose_name = 'Video'
+        verbose_name_plural = 'Videos'
+        ordering = ['-created_at']
+
+    def __str__(self):
+        """Unicode representation of Video."""
+        return self.title
+
+
+class GalleryImage(models.Model):
+    """Model definition for GalleryImage."""
+
+    title = models.CharField(max_length=250)
+    description = models.TextField()
+    image = models.ImageField(upload_to='gallery/%Y/%m/%d/')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        """Meta definition for GalleryImage."""
+
+        verbose_name = 'GalleryImage'
+        verbose_name_plural = 'GalleryImages'
+        ordering = ['-created_at']
+
+    def __str__(self):
+        """Unicode representation of GalleryImage."""
+        return self.title
+
+    @property
+    def src(self):
+        """Return the image URL for template usage."""
+        return self.image.url if self.image else None
