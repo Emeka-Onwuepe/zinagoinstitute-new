@@ -6,17 +6,26 @@ from frontview.helpers.home import (nav_links, section_header,
 from frontview.helpers.research import programmes, outputs, flagshipProjects
 from frontview.helpers.publications import publications,underReview,conferencePresentations
 from frontview.helpers.policy import policyTopics
-from .models import ConferencePresentation, FlagshipProject,Publications,Events
+from .models import ConferencePresentation, FlagshipProject, Publications, Events, Video, GalleryImage
 
 
 
 # Create your views here.
 def homeView(request):  
-    return render(request,'frontview/index.html',{'nav_links':nav_links,'active_link':"Home",
-                                                    'policies':policies,
-                                                  'section_header':section_header,
-                                                  'highlights':highlights,'stats':stats,
-                                                  'leaders':leaders})
+    featured_video = Video.objects.first()
+    gallery_images = GalleryImage.objects.all()[:10]
+    
+    return render(request,'frontview/index.html',{
+        'nav_links': nav_links,
+        'active_link': "Home",
+        'policies': policies,
+        'section_header': section_header,
+        'highlights': highlights,
+        'stats': stats,
+        'leaders': leaders,
+        'featured_video': featured_video,
+        'gallery_images': gallery_images
+    })
 
 def aboutView(request):
     return render(request,'frontview/about.html',{'nav_links':nav_links,'active_link':"About",
